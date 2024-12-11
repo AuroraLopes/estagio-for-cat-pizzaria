@@ -1,0 +1,55 @@
+.pizza-card {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #190482;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px;
+      width: 275px;
+      height: 400px;
+      transition: transform 0.3s ease-in-out;
+  
+    &:hover {
+      transform: translateY(-8px);
+    }
+  
+    .pizza-image {
+      width: 220px;
+      height: 220px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      border-radius: 8px;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    .pizza-details {
+      text-align: center;
+  
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #C2D9FF;
+      }
+  
+      p {
+        font-size: 14px;
+        color: #C2D9FF;
+        margin-bottom: 8px;
+      }
+  
+      .price {
+        font-size: 16px;
+        font-weight: 500;
+        color: #f39c12;
+      }
+    }
+  }
+  

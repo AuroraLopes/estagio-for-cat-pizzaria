@@ -1,0 +1,27 @@
+
+.painel-container{
+    margin: 20px 10px;
+    height: 500px;
+    border-radius: 20px;
+    background-image: url(../../../../assets/images/painel/pizza-painel.jpg);
+    background-size: cover;
+
+    .texts{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 20px;
+        justify-content: center;
+
+        .texts-n{
+            font-size:100px;
+            color: white;
+        }
+
+        .texts-p{
+            font-size: 50px;
+            color: white;
+        }
+    }
+}

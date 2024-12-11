@@ -1,0 +1,109 @@
+.header-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 100%;
+      align-items: center;
+      background-color: #190482;
+      justify-items: center;
+
+
+    img{
+        width: 75px;
+        height: 100px;
+        margin: 0px 10px;
+    }
+
+
+    .links{
+        nav{
+            display: flex;
+            
+            li{
+                list-style-type: none;
+                font-size: 20px;
+                margin: 15px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                a{
+                    text-decoration: none;
+                    color: #C2D9FF;
+                }
+            }
+        }
+    }
+
+    .search-bar {
+        position: relative; /* Ainda mantém a relação de posicionamento para a lista de resultados */
+        display: flex; /* Alinha os elementos na horizontal */
+        align-items: center; /* Alinha verticalmente os itens (input e botão) */
+        gap: 10px; /* Espaçamento entre o campo de pesquisa e o botão */
+        margin-right: 20px;
+        
+        form{
+            display: flex;
+        }
+
+        input {
+          padding: 0.5em;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          flex: 1; /* Faz o input ocupar o máximo de espaço possível */
+          width: 300px; /* Não precisamos mais definir largura fixa */
+        }
+      
+        button {
+            padding: 0.5em;
+            background-color: #609cf7;
+            color: #fff;
+            width: 40px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        
+      
+          &:hover {
+            background-color:#276eda;
+          }
+        }
+      
+        .search-results {
+          position: absolute; /* Continua posicionada abaixo do campo de busca */
+          top: calc(100% + 5px); /* Aparece logo abaixo do input */
+          left: 0;
+          width: 100%; /* Mesma largura do input */
+          background-color: #fff;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          z-index: 10;
+          max-height: 200px; /* Limita a altura da lista */
+          overflow-y: auto;
+      
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+          }
+      
+          li {
+            padding: 0.5em 1em;
+            cursor: pointer;
+      
+            &:hover {
+              background-color: #f0f0f0;
+            }
+          }
+      
+          li:last-child {
+            color: #888;
+            font-style: italic;
+          }
+        }
+      }
+      
+      
+    
+}

@@ -1,0 +1,40 @@
+<section class="header-container">
+    <div class="logo">
+        <img src="../../assets/images/logo.png" alt="">
+    </div>
+    <div class="links">
+        <nav>
+          <li><a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a></li>
+          <li><a routerLink="/catalog" routerLinkActive="active" ariaCurrentWhenActive="page">Pizzas</a></li>
+          <li><a routerLink="/admin" routerLinkActive="active" ariaCurrentWhenActive="page">Admin</a></li>
+        </nav>
+    </div>
+    <div class="search-bar">
+      <form (submit)="onSearch($event)">
+        <input
+          type="text"
+          placeholder="Buscar pizza ou ingrediente..."
+          [(ngModel)]="searchQuery"
+          name="searchQuery"
+          (focus)="showResults = true"
+        />
+        <button type="submit"><svg width="15px" height="15px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
+      </form>
+    
+      <!-- Lista de resultados -->
+      <div
+        class="search-results"
+        *ngIf="showResults"
+        (mouseenter)="hovering = true"
+        (mouseleave)="hovering = false; hideResults()"
+      >
+        <ul>
+          <li *ngFor="let pizza of searchResults">
+            {{ pizza.name }}
+          </li>
+          <li *ngIf="searchResults.length === 0">Nenhum item encontrado.</li>
+        </ul>
+      </div>
+    </div>
+       
+</section>

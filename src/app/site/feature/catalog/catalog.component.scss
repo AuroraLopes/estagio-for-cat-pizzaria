@@ -1,0 +1,15 @@
+section{
+    align-items: center;
+    margin-top: 30px;
+
+    h1{
+        text-align: center;
+        margin: 20px;
+        color: #190482;
+    }
+}
+.catalog-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}

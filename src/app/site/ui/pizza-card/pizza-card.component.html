@@ -1,0 +1,11 @@
+<div class="pizza-card">
+  <div class="pizza-image">
+    <img *ngIf="pizza.image" [src]="pizza.image" alt="{{ pizza.name }}" />
+  </div>
+  <div class="pizza-details">
+    <h2>{{ pizza.name }}</h2>
+    <p>{{ pizza.description }}</p>
+    <p>Ingredientes: {{ ingredientList }}</p>
+    <p>Preço: {{ pizza.price | currency:'BRL':'symbol' }}</p>
+  </div>
+</div>

@@ -1,0 +1,269 @@
+.admin-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    input[type="file"] {
+        display: none;
+      }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      margin-top: 5px;
+    }
+
+    #pizza-image-choose {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      height: 40px;
+      padding: 0 15px;
+      background-color: #190482;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      white-space: nowrap;
+      text-align: center;
+
+      &::before {
+        
+        margin-right: 8px;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        background-color: #dc3545;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: none;
+      }
+    }
+  }
+
+  .ingredient-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    justify-items: start;
+  }
+  
+  .ingredient-item {
+    display: flex;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    white-space: nowrap; /* Evita quebra de linha */
+    overflow: hidden; /* Impede que o texto ultrapasse os limites */
+    text-overflow: ellipsis; /* Adiciona "..." se o texto for longo demais */
+  }
+  
+  .ingredient-item input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .tittle-list{
+    margin: 20px 10px;
+  }
+  
+  .pizza-image-preview {
+    margin-top: 15px;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-group-button{
+    display: flex;
+    justify-content: center;
+  button {
+    background-color: #190482;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #218838;
+    }
+  }
+
+    }
+
+  h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  p {
+    margin: 5px 0;
+    color: #666;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      .pizza-card {
+        display: flex;
+        width: 100%;
+        margin: 20px;
+        flex-direction: row;
+        text-align: center;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #f8f9fa;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        justify-content: space-around;
+
+        &:hover {
+          transform: translateY(-5px); /* Levanta o card ao passar o mouse */
+        }
+
+        .pizza-card-details {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .pizza-card-img {
+          width: 100px; /* Tamanho fixo da imagem */
+          height: 100px; /* Tamanho fixo da imagem */
+          object-fit: cover;
+          border-radius: 10px;
+          margin-right: 15px; /* Espaçamento entre imagem e detalhes */
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+          font-size: 1.3rem;
+          color: #333;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 1rem;
+          color: #777;
+          margin-bottom: 10px;
+        }
+
+        .price {
+          font-size: 1.1rem;
+          font-weight: bold;
+          color: #28a745;
+        }
+
+        button {
+          margin-top: 10px;
+          background-color: #190482;
+          border: none;
+          color: white;
+          padding: 10px 20px;
+          font-size: 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: #c82333;
+          }
+        }
+
+        .pizza-card-actions {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  // Modificação: Grid para 3 colunas na lista de pizzas
+  .pizza-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 20px;
+  }
+
+  // Títulos dos campos no formulário com IDs
+  #titulo-nome,
+  #titulo-descricao,
+  #titulo-preco,
+  #titulo-ingredientes,
+  #titulo-imagem {
+    margin: 20px 0px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+
+  .add-pizza-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #218838;
+    }
+  }
+}
